@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -21,11 +20,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable}  h-full antialiased`}
+      className={`${inter.className}  h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        <ThemeProvider attribute={"class"}>{children}</ThemeProvider>
+        <ThemeProvider
+          attribute={"class"}
+          defaultTheme={"system"}
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
