@@ -2,7 +2,8 @@
 
 import { DotPattern } from "@/components/ui/dot-background";
 import { motion } from "motion/react";
-
+import { Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 interface techStack {
   name: string;
   color: string;
@@ -13,7 +14,8 @@ export default function Home() {
     { name: "Golang", color: "#6ad6e3" },
     { name: "Typescript", color: "#3178c6" },
     { name: "Next.js", color: "#FFFFFF" },
-    { name: "Postgres", color: "#326690" },
+    { name: "PostgreSQL", color: "#326690" },
+    { name: "MongoDB", color: "#00ed64" },
     { name: "Linux", color: "#f5bd0d" },
   ];
 
@@ -151,6 +153,25 @@ export default function Home() {
                 </span>
               </div>
             </a>
+            <a
+              href="https://pulsir.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between border p-3 rounded-md w-full hover:bg-white/5 transition-colors group"
+            >
+              <p className="font-bold">
+                Pulsir.net ·{" "}
+                <span className="font-normal text-gray-400">
+                  Contributor Java Developer
+                </span>
+              </p>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="text-gray-400">Jun 2023 - Aug 2023</span>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                  ↗
+                </span>
+              </div>
+            </a>
           </motion.div>
           <motion.div
             initial={{ x: 20, opacity: 0 }}
@@ -181,6 +202,97 @@ export default function Home() {
                 </span>
               </div>
             </a>
+          </motion.div>
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="space-y-2"
+          >
+            <div className="flex items-center flex-row text-3xl lg:text:6xl font-black">
+              Contact{" "}
+              <span className="text-3xl lg:text:6xl text-blue-500">.</span>
+            </div>
+            <div className="flex flex-row gap-2 mt-3 ">
+              <a
+                href="mailto:krawczykbartosz@proton.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between border p-3 rounded-md hover:bg-white/5 transition-colors group space-x-2 w-full"
+              >
+                <p className="font-bold">Email </p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </div>
+              </a>
+              <a
+                href="https://github.com/SkuliX01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between border p-3 rounded-md  hover:bg-white/5 transition-colors group space-x-2 w-full"
+              >
+                <p className="font-bold">Github </p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bartosz-krawczyk07/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between border p-3 rounded-md hover:bg-white/5 transition-colors group space-x-2 w-full "
+              >
+                <p className="font-bold">LinkedIn </p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ x: 20, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="space-y-2"
+          >
+            <div className="flex items-center flex-row text-3xl lg:text:6xl font-black">
+              Resume{" "}
+              <span className="text-3xl lg:text:6xl text-blue-500">.</span>
+            </div>
+            <div className="flex flex-row gap-2">
+              <a
+                href="/resume-en.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between border p-3 rounded-md w-full hover:bg-white/5 transition-colors group"
+              >
+                <p className="font-bold">📄 Download CV — English</p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </div>
+              </a>
+              <a
+                href="/resume-pl.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between border p-3 rounded-md w-full hover:bg-white/5 transition-colors group"
+              >
+                <p className="font-bold">📄 Download CV — Polish</p>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </div>
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
